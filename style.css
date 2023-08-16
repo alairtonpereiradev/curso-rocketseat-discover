@@ -7,11 +7,112 @@ body {
   background: url(./assets/bg-mobile.jpg) no-repeat top center/cover;
 }
 
-#container {
-  width: 360px;
-  height: 712px;
-  /* alinha bem ao meio a div container */
-  margin: auto;
-  border: 1px solid red;
+/* resetar a configuração padrão do navegador */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
+
+body * {
+  font-family: 'Inter', sans-serif;
+  color: white
+
+}
+/* #container o "#" indica que o container é um id */
+#container {
+  
+width: 360px;
+/* height: 712px; */
+/* alinha bem ao meio a div container */
+margin: 56px auto 0px;
+padding: 0 24px;
+
+/* border: 1px solid red; */
+
+}
+
+#profile {
+  text-align: center;
+  padding: 24px;
+  /* border: 1px solid red; */
+}
+
+#profile img {
+  border-radius: 112px;
+  width: 112px;
+}
+
+#profile p {
+  font-weight: 700;
+  /* border: 1px solid red; */
+  line-height: 24px; /* 150% */
+  margin-top: 8px;
+  /* Essa fonte já é padrão no navegador */
+  /* font-size: 16px; */
+  
+}
+
+/* Links */
+
+ul {
+/* remover os pontinhos da lista */
+list-style: none;
+display: flex;
+/* O flex-direction e o gap só faz sentido com quando houver display flex */
+flex-direction: column;
+gap: 16px;
+
+}
+/* O jeito certo é o que resolve, depois aperfeiçoa */
+ul li a {
+ 
+  display: flex;
+  /* Centralizar o texto no eixo central */
+  align-items: center;
+  /* Centraliza o texto no centro da caixa */
+  justify-content: center;
+
+  padding: 16px 24px;
+
+  background: rgba(255, 255, 255, 0.10);
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.50);
+  /* Embassado  */
+  backdrop-filter: blur(4px);
+  /* para navegador Safari 9 */
+  -webkit-backdrop-filter: blur(4px);
+
+  /* Tira a linha de baixo do link */
+  text-decoration: none;
+  font-weight: 700;
+
+  /* suavizar o hover */
+  transition: background 0.5s;
+ 
+}
+
+/* pseudo-selector */
+/* Design css para o ponteiro do mouse sobre os elementos */
+ul li a:hover {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1.5px solid white;
+}
+
+/* Social links */
+
+#social-links {
+  display: flex;
+  gap: 16px;
+  padding: 24px;
+
+  /* justify-content: center;
+  align-items: flex-start;
+  align-self: stretch;
+
+  width: 40px;
+  height: 40px; */
+
+
+}
